@@ -1,6 +1,7 @@
 import React from "react";
 import { Select } from "antd";
 import { Typography } from "antd";
+import PropTypes from "prop-types";
 
 const { Option } = Select;
 const { Title } = Typography;
@@ -31,6 +32,11 @@ const SelectItem = ({ title, placeholder }) => {
       </div>
     </>
   );
+};
+
+SelectItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default SelectItem;

@@ -4,6 +4,7 @@ import classes from "./Form.module.css";
 import "antd/dist/antd.css";
 import SelectItem from "./SelectItem/SelectItem";
 import AccordionSection from "./AccordionSection/AccordionSection";
+import PropTypes from "prop-types";
 
 const { Title } = Typography;
 
@@ -26,6 +27,10 @@ const Form = ({ onSubmit }) => {
       </div>
     </>
   );
+};
+
+Form.protoTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default Form;

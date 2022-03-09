@@ -2,10 +2,11 @@ import React from "react";
 import classes from "./Successful.module.css";
 import { Typography } from "antd";
 import { Button } from "antd";
+import PropTypes from "prop-types";
 
 const { Title } = Typography;
 
-const Successful = () => {
+const Successful = ({ onSubmit }) => {
   return (
     <div className={classes.content}>
       <div>
@@ -27,12 +28,17 @@ const Successful = () => {
             fontWeight: "bold",
             background: "#1E6FB0",
           }}
+          onClick={onSubmit}
         >
           Button Default
         </Button>
       </div>
     </div>
   );
+};
+
+Successful.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default Successful;

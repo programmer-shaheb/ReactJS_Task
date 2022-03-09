@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import Arrow from "./Arrow";
 import "./CustomAccordion.css";
+import PropTypes from "prop-types";
 
 const CustomAccordion = (props) => {
   const [setActive, setActiveState] = useState("");
@@ -30,14 +31,15 @@ const CustomAccordion = (props) => {
         style={{ maxHeight: `${setHeight}` }}
         className="accordion__content"
       >
-        {/* <div
-          className="accordion__text"
-          dangerouslySetInnerHTML={{ __html: props.content }}
-        /> */}
         <p>{props.children}</p>
       </div>
     </div>
   );
+};
+
+CustomAccordion.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
 };
 
 export default CustomAccordion;

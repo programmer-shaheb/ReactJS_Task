@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal } from "antd";
+import PropTypes from "prop-types";
 
 const Popup = ({ isModalVisible, handleCancel, handleOk }) => {
   return (
@@ -14,6 +15,12 @@ const Popup = ({ isModalVisible, handleCancel, handleOk }) => {
       </p>
     </Modal>
   );
+};
+
+Popup.propTypes = {
+  isModalVisible: PropTypes.bool.isRequired,
+  handleCancel: PropTypes.func.isRequired,
+  handleOk: PropTypes.func.isRequired,
 };
 
 export default Popup;

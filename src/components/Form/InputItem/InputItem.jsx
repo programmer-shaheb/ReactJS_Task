@@ -2,6 +2,7 @@ import React from "react";
 import { Input } from "antd";
 import { Typography } from "antd";
 import { DatePicker } from "antd";
+import PropTypes from "prop-types";
 
 const { Title } = Typography;
 
@@ -33,6 +34,12 @@ const InputItem = ({ title, picker, placeholder }) => {
       </div>
     </>
   );
+};
+
+InputItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  picker: PropTypes.bool,
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default InputItem;

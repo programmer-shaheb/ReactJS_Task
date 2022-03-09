@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography } from "antd";
-import { Divider } from "antd";
-
+import PropTypes from "prop-types";
 import classes from "./Header.module.css";
 
 const { Title } = Typography;
@@ -18,7 +17,7 @@ const Header = () => {
             AWG INSURANCE BROKERS PTE LTD
           </Title>
           <Title level={4} className={classes.subtitle}>
-            我们提供完善的设计原则
+            我 们 提 供 完 善 的 设 计 原 则
           </Title>
           <Title level={5} className={classes.paragraph}>
             BUSINESS REGISTRATION NO: 199002234G GST NO: 199002234G 240

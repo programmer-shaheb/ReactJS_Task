@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "../Accordion/Accordion";
 import { Button } from "antd";
 import Popup from "../../Modal/Popup";
+import PropTypes from "prop-types";
 
 const AccordionSection = ({ onShow }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -52,6 +53,10 @@ const AccordionSection = ({ onShow }) => {
       </div>
     </>
   );
+};
+
+AccordionSection.propTypes = {
+  onShow: PropTypes.func.isRequired,
 };
 
 export default AccordionSection;
